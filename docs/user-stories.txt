@@ -1,0 +1,12 @@
+
+This is a raw requirement document for the beer-order software
+
+1 - Administrator shall be able to login with a username and password
+2 - Administrator shall be able to input the beer details, such as name, description, bottle size,label, price, maximum amount that a single user can order and the quantity available for sale
+3 - The user don't need to be logged into the system
+4 - The user shall be able to see the list of available beers
+5 - The user shall be able to see how many beers are available for order in real time
+6 - The user shall be able to order the beer, inputing his email address, phone number, place for delivery, and the quantity of beers he wants
+7 - The user shall be able to see total price of his order
+8 - The user shall be able to receive a confirmation or non-confirmation message, to confirm that his order was successfully made
+
