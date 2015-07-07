@@ -1,0 +1,27 @@
+class CreateOrders < ActiveRecord::Migration
+  def change
+    create_table :orders do |t|
+      t.string :customer_name, limit: 50, null: false
+      t.string :email, limit: 100
+      t.string :phone_number, limit: 20
+      t.string :delivery_address, limit: 200, null: false
+      t.integer :quantity
+      t.string :status, limit: 10
+      t.timestamp :created_at
+      t.references :beer, index: true, foreign_key: true
+
+      t.timestamps null: false
+    end
+  end
+end
+
+ id serial NOT NULL,
+  customer_name character varying(50) NOT NULL,
+  email_address character varying(100),
+  phone_number character varying(20),
+  delivery_address character varying(200) NOT NULL,
+  quantity integer NOT NULL,
+  status character varying(10),
+  order_date timestamp without time zone NOT NULL DEFAULT now(),
+  beer_id integer NOT NULL,
+  CONSTRAINT order_pk PRIMARY KEY (id),

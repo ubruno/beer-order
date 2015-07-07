@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  email: MyString
+  phone_number: MyString
+  delivery_address: MyString
+  quantity: 1
+  status: MyString
+  order_date: 2015-07-07 18:59:50
+  beer_id: 
+
+two:
+  customer_name: MyString
+  email: MyString
+  phone_number: MyString
+  delivery_address: MyString
+  quantity: 1
+  status: MyString
+  order_date: 2015-07-07 18:59:50
+  beer_id: 

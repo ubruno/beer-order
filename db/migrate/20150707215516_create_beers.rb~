@@ -1,0 +1,17 @@
+class CreateBeers < ActiveRecord::Migration
+  def change
+    create_table :beers do |t|
+      t.string :name
+      t.string :description
+      t.string :style
+      t.string :bootle_size
+      t.binary :label
+      t.float :price
+      t.integer :maximum_order_amount
+      t.integer :available_quantity
+      t.timestamp :creation_date
+
+      t.timestamps null: false
+    end
+  end
+end

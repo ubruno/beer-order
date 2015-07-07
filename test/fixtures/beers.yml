@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  style: MyString
+  bootle_size: MyString
+  label: 
+  price: 1.5
+  maximum_order_amount: 1
+  available_quantity: 1
+  creation_date: 2015-07-07 18:55:16
+
+two:
+  name: MyString
+  description: MyString
+  style: MyString
+  bootle_size: MyString
+  label: 
+  price: 1.5
+  maximum_order_amount: 1
+  available_quantity: 1
+  creation_date: 2015-07-07 18:55:16
