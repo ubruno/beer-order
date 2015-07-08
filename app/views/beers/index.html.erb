@@ -1,11 +1,11 @@
 <% if @beers.blank? %>
 <p>There are not any beers currently in the system.</p>
 <% else %>
-<p>These are the current books in our system</p>
+<p>These are the current beers in our system</p>
 <ul id="beers">
 <% @beers.each do |c| %>
 <li><%= link_to c.name, {:action => 'show', :id => c.id} -%></li>
 <% end %>
 </ul>
 <% end %>
-<p><%= link_to "Add new Book", {:action => 'new' }%></p>
+<p><%= link_to "Add new Beer", {:action => 'new' }%></p>

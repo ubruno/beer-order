@@ -1,5 +1,4 @@
-class BeerController < ApplicationController
-
+class BeersController < ApplicationController
 #   def list
 #      @beers = Beer.all
 #   end
