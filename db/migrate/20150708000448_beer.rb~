@@ -1,0 +1,12 @@
+class Beer < ActiveRecord::Migration
+  def self.up
+      SystemSetting.create  name:  'Campiá',
+                            description: 'Delicious',
+                            style: 'Hefe-Weizen',
+			    bootle_size: '600ml',
+			    price: 7,
+			    bootle_size: '600ml',
+			    available_quantity: 60,
+			
+  end
+end
