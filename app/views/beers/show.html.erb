@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beer.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @beer.description %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @beer.style %>
+</p>
+
+<p>
+  <strong>Bootle size:</strong>
+  <%= @beer.bootle_size %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @beer.price %>
+</p>
+
+<p>
+  <strong>Maximum order amount:</strong>
+  <%= @beer.maximum_order_amount %>
+</p>
+
+<p>
+  <strong>Available quantity:</strong>
+  <%= @beer.available_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Back', beers_path %>
