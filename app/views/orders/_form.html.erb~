@@ -1,7 +1,7 @@
 <div>
 <%= @order.beer.name %>
 Quantidade Disponível: <label id="available" ><%= @order.beer.available_quantity %></label>
-<input type="hidden" id="beer_id" value="<%= @order.beer.id %>" />
+
 </div>
 
 <%= form_for(@order) do |f| %>

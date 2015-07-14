@@ -1,5 +1,6 @@
 Rails.application.routes.draw do 
-   resources :beers
+   get 'orders/beer/:beer_id' => orders#order
+   resources :beers, :orders
 #	root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
