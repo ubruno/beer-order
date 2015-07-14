@@ -1,8 +1,6 @@
-<div>
-<%= @order.beer.name %>
-Quantidade Disponível: <label id="available" ><%= @order.beer.available_quantity %></label>
-
-</div>
+<p>Cerveja Escolhida: <%= @order.beer.name %> <%= @order.beer.bootle_size %> </p>
+<p>Quantidade Disponível: <label id="available" ><%= @order.beer.available_quantity %></label></p>
+<input type="hidden" id="beer_id" value="<%= @order.beer.id %>" />
 
 <%= form_for(@order) do |f| %>
   <% if @order.errors.any? %>
@@ -18,35 +16,35 @@ Quantidade Disponível: <label id="available" ><%= @order.beer.available_quantit
   <% end %>
   
   <div class="field">
-    <%= f.label :customer_name %><br>
+    <%= f.label :customer_name, "Nome" %><br>
     <%= f.text_field :customer_name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email, "Email pessoal" %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phone_number %><br>
+    <%= f.label :phone_number, "Telefone" %><br>
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
-    <%= f.label :delivery_address %><br>
+    <%= f.label :delivery_address, "Endereço para Entrega" %><br>
     <%= f.text_field :delivery_address %>
   </div>
   <div class="field">
-    <%= f.label :quantity %><br>
+    <%= f.label :quantity, "Quantidade" %><br>
     <%= f.text_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
+    <%= f.label :status, "Status" %><br>
     <%= f.text_field :status %>
   </div>
   <div class="field">
     <%= f.hidden_field :beer %>
-  </div>
+  </div><br />
   <div class="actions">
-    <%= f.submit %>
-  </div>
+    <p><%= f.submit "Fazer Pedido" %></p>
+  </div><br />
 <% end %>
 
 <script src="/js/order.js" ></script>
