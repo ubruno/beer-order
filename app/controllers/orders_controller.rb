@@ -32,16 +32,28 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+    @order = Order.new(order_params)    
+    @order.beer = Beer.find(params[:order_beer_id])
+    @order.status = 'NEW'
 
+    sum = @order.beer.available_quantity - @order.quantity
+   
     respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
+       if @order.beer.available_quantity <= 0
+         format.html { redirect_to @order, notice: 'Ops! Estoque esgotado :(' }
+       elsif sum >= 0
+          @order.beer.available_quantity = sum
+          if @order.save && @order.beer.save
+            logger.info "New order was created"
+            format.html { redirect_to @order, notice: 'Pedido feito com sucesso, obrigado!' }
+            format.json { render :show, status: :created, location: @order }
+          else
+            format.html { render :new }
+            format.json { render json: @order.errors, status: :unprocessable_entity }
+         end
+       else 
+	   format.html { redirect_to @order, notice: 'Ops! Seu pedido é maior que a quantidade que temos disponíveis :(' }
+       end
     end
   end
 

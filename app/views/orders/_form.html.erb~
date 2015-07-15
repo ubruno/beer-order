@@ -28,7 +28,7 @@
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
-    <%= f.label :delivery_address, "Endereço para Entrega" %><br>
+    <%= f.label :delivery_address, "Local para Entrega" %><br>
     <%= f.text_field :delivery_address %>
   </div>
   <div class="field">
@@ -36,11 +36,7 @@
     <%= f.text_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :status, "Status" %><br>
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :beer %>
+    <input type="hidden" name="order_beer_id" id="order_beer_id" value="<%= @order.beer.id %>" />
   </div><br />
   <div class="actions">
     <p><%= f.submit "Fazer Pedido" %></p>
