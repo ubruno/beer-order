@@ -13,5 +13,18 @@ Order = {
 			q.textContent = beer.available_quantity;			
 		};
 		xmlhttp.send();
+	},
+
+	updatePrice: function(){
+		var quantityElement = document.getElementById("order[quantity]");
+		var singlePriceElement = document.getElementById("beer_price");
+		var totalPriceElement = document.getElementById("total_price");
+
+		var quantity, singlePrice, totalPrice;
+		quantity = Number.parseFloat(quantityElement.value);
+		singlePrice = Number.parseFloat(singlePriceElement.innerHTML);
+		totalPrice = quantity * singlePrice;
+
+		totalPriceElement.innerHTML = totalPrice.toFixed(2);
 	}
 };

@@ -1,4 +1,5 @@
 <p>Cerveja Escolhida: <%= @order.beer.name %> <%= @order.beer.bootle_size %> </p>
+<p>Preço Unitário: R$ <label id="beer_price"><%= sprintf('%.2f',@order.beer.price) %></label></p>
 <p>Quantidade Disponível: <label id="available" ><%= @order.beer.available_quantity %></label></p>
 <input type="hidden" id="beer_id" value="<%= @order.beer.id %>" />
 
@@ -33,7 +34,15 @@
   </div>
   <div class="field">
     <%= f.label :quantity, "Quantidade" %><br>
-    <%= f.text_field :quantity %>
+    <select id="order[quantity]" name="order[quantity]" >
+        <% for i in 1..@order.beer.maximum_order_amount %>
+	   <option value="<%= i %>"><%= i %></option>
+	<% end %>
+    </select>
+  </div></br>
+  <div class="field">
+	<label>Total: R$ </total>
+	<label id="total_price"><%= sprintf('%.2f',@order.beer.price) %></total>
   </div>
   <div class="field">
     <input type="hidden" name="order_beer_id" id="order_beer_id" value="<%= @order.beer.id %>" />
@@ -45,7 +54,7 @@
 
 <script src="/js/order.js" ></script>
 <script >
-    window.setInterval(Order.verifyBeerQuantity, 3000);
-
+   window.setInterval(Order.verifyBeerQuantity, 2000);
+   document.getElementById("order[quantity]").onchange = Order.updatePrice;
 </script>
 
