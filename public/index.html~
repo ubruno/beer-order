@@ -22,7 +22,7 @@
   <body>
 	<div class="jumbotron">
 		<h1>Encomende sua Campiá Intriga</h1>
-		<p>A nova produção da Campiá Intriga está quase pronta para entrega, faça sua encomenda!</p>
+		<p>A nova produção da Campiá Intriga está quase pronta para entrega, faça já sua encomenda!</p>
 	</div>
 	<br>
 
@@ -35,17 +35,14 @@
             </div>
             <div class="panel-body">
                <ul class="list-group">
-               <li class="list-group-item">355ml
+               <li class="list-group-item">300ml
 		  <a class="btn btn btn-default" href="orders/beer/1" >Encomendar</a>
-               </li>
-               <li class="list-group-item">600ml
-		  <a class="btn btn btn-default" href="orders/beer/2" >Encomendar</a>
                </li>
              </ul>
            </div>
           </div>
 
-        <img src="img/intriga_rotulo.jpg" class="img-thumbnail" alt="Intriga">
+        <img src="https://dl.dropboxusercontent.com/s/rdurwvtus9lkqxj/intriga_rotulo.jpg" class="img-thumbnail" alt="Intriga">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->

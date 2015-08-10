@@ -40,12 +40,13 @@ class OrdersController < ApplicationController
     @order.beer = Beer.find(params[:order_beer_id])
     @order.status = 'NEW'
 
+    @order.delivery_address = "Inatel"
     sum = @order.beer.available_quantity - @order.quantity
    
     respond_to do |format|
        if @order.beer.available_quantity <= 0
          format.html { redirect_to @order, notice: 'Ops! Estoque esgotado :(' }
-       elsif sum >= 0
+       elsif sum >= 0 && !@order.email.empty && !@order.customer_name.empty
           @order.beer.available_quantity = sum
           if @order.save && @order.beer.save
             logger.info "New order was created"

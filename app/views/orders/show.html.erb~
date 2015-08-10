@@ -32,8 +32,11 @@
 
 <p>
   <strong>Beer:</strong>
-  <%= @order.beer %>
+  <%= @order.beer.name %>
 </p>
 
+<!--
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
+-->

@@ -28,10 +28,10 @@
     <%= f.label :phone_number, "Telefone" %><br>
     <%= f.text_field :phone_number %>
   </div>
-  <div class="field">
+  <!--<div class="field">
     <%= f.label :delivery_address, "Local para Entrega" %><br>
     <%= f.text_field :delivery_address %>
-  </div>
+  </div>-->
   <div class="field">
     <%= f.label :quantity, "Quantidade" %><br>
     <select id="order[quantity]" name="order[quantity]" >
