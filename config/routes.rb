@@ -1,7 +1,7 @@
 Rails.application.routes.draw do 
    get 'orders/beer/:beer_id' => 'orders#order'
-   get 'orders/list' => 'orders#list'
-   resources :beers, :orders
+   get 'orders/listbrunohidden' => 'orders#list'
+   resources :orders
 #	root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
