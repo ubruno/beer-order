@@ -5,8 +5,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Voltar', orders_path %>
-
+<a href="/" >Voltar</a>
+<p>Pedidos, dúvidas, sugestões ou críticas entre em contato: brunoandrade07@gmail.com</p> 
   </div>
 </div>
 
