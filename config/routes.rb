@@ -1,6 +1,6 @@
 Rails.application.routes.draw do 
    get 'orders/beer/:beer_id' => 'orders#order'
-   get 'orders/listbrunohidden' => 'orders#list'
+   get 'orders/listbrunohidden/:beer_id' => 'orders#list'
    resources :orders, :beers
 #	root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.

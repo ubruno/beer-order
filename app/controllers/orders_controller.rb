@@ -16,7 +16,12 @@ class OrdersController < ApplicationController
   end
 
   def list
-    @orders = Order.eager_load(:beer)
+    #@orders = Order.eager_load(:beer)
+    if params[:beer_id] == "0"
+       @orders = Order.eager_load(:beer)
+    else
+       @orders = Order.eager_load(:beer).where("beers.id = ?", params[:beer_id])
+    end
   end
 
   # GET /orders/1
