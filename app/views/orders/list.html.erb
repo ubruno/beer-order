@@ -17,7 +17,11 @@
   </thead>
 
   <tbody>
+    <% totalQuantity = 0 %>
+    <% totalMoney = 0 %>
     <% @orders.each do |order| %>
+      <% totalQuantity += order.quantity %>
+      <% totalMoney += order.quantity * order.beer.price %>
       <tr>
         <td><%= order.customer_name %></td>
         <td><%= order.email %></td>
@@ -32,7 +36,8 @@
     <% end %>
   </tbody>
 </table>
-
+<p>Total vendido: <%= totalQuantity%></p>
+<p>Valor das vendas: R$<%= totalMoney %></p>
 <br>
 
 <%= link_to 'New Order', new_order_path %>
