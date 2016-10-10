@@ -18,19 +18,19 @@
   
   <div class="field">
     <%= f.label :customer_name, "Nome" %><br>
-    <%= f.text_field :customer_name %>
+    <%= f.text_field :customer_name, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :email, "Email pessoal" %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :phone_number, "Telefone" %><br>
-    <%= f.text_field :phone_number %>
+    <%= f.text_field :phone_number, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :quantity, "Quantidade" %><br>
-    <select id="order[quantity]" name="order[quantity]" >
+    <select id="order[quantity]" name="order[quantity]" class="form-control" >
         <% for i in 1..@order.beer.maximum_order_amount %>
 	   <option value="<%= i %>"><%= i %></option>
 	<% end %>
@@ -44,7 +44,7 @@
     <input type="hidden" name="order_beer_id" id="order_beer_id" value="<%= @order.beer.id %>" />
   </div><br />
   <div class="actions">
-    <p><%= f.submit "Fazer Pedido" %></p>
+    <p><%= f.submit "Fazer Pedido", class: "form-control" %></p>
   </div><br />
 <% end %>
 
