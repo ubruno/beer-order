@@ -62,7 +62,7 @@ class OrdersController < ApplicationController
             format.json { render json: @order.errors, status: :unprocessable_entity }
          end
        else 
-	   format.html { redirect_to @order, notice: 'Ops! Seu pedido é maior que a quantidade que temos disponíveis :(' }
+	   format.html { redirect_to @order, notice: 'Ops! Seu pedido é maior que a quantidade que temos disponível :(' }
        end
     end
   end
