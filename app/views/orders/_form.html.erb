@@ -1,5 +1,5 @@
-<p>Cerveja Escolhida: <%= @order.beer.name %> <%= @order.beer.bootle_size %> </p>
-<p>Preço Unitário: R$ <label id="beer_price"><%= sprintf('%.2f',@order.beer.price) %></label></p>
+<p>Cerveja Escolhida: <label><%= @order.beer.name %> <%= @order.beer.bootle_size %></label></p>
+<p>Preço Unitário: <label id="beer_price">R$ <%= sprintf('%.2f',@order.beer.price) %></label></p>
 <p>Quantidade Disponível: <label id="available" ><%= @order.beer.available_quantity %></label></p>
 <input type="hidden" id="beer_id" value="<%= @order.beer.id %>" />
 
