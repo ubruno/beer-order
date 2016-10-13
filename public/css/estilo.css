@@ -3,3 +3,8 @@ div.font {
     font-size: 21px;
     font-weight: 200;
 }
+
+
+div.form-order {
+	float: none;
+}
