@@ -22,7 +22,7 @@ Order = {
 		var singlePriceElement = document.getElementById("beer_price");
 		var totalPriceElement = document.getElementById("total_price");
 
-		singlePriceElement = singlePriceElement.innerHTML.replace('R$').trim();
+		singlePriceElement = singlePriceElement.innerHTML.replace('R$', '').trim();
 		
 		var quantity, singlePrice, totalPrice;
 		quantity = Number.parseFloat(quantityElement.value);
