@@ -49,8 +49,11 @@
 <% end %>
 
 <script src="/js/order.js" ></script>
-<script >
+<script>
    window.setInterval(Order.verifyBeerQuantity, 2000);
+   
    document.getElementById("order[quantity]").onchange = Order.updatePrice;
+   
+   Order.submitForm();
 </script>
 

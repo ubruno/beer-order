@@ -30,5 +30,30 @@ Order = {
 		totalPrice = quantity * singlePrice;
 
 		totalPriceElement.innerHTML = totalPrice.toFixed(2);
+	},
+	
+	submitForm: function() {
+		var myForm = document.getElementById('new_order');
+		if (myForm) {
+			myForm.onsubmit = function() {
+				return Order.checkFieldsForm();
+			};
+		}
+	},
+	
+	checkFieldsForm: function() {
+		var idInputFields = ['order_customer_name', 'order_email', 'order_phone_number'],
+			i = null,
+			max = idInputFields.length;
+			
+		for (i = 0; i < max; i++) {
+			var input = document.getElementById(idInputFields[i]);
+			if (input.value.trim() === '') {
+				alert('Por favor, preencha todos os campos!');
+				return false;
+			}
+		}
+		
+		return true;
 	}
 };
