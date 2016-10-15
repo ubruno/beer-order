@@ -22,8 +22,8 @@
 		</p>
 
 		<p>
-		  <strong>Endereço de entrega:</strong>
-		  <%= @order.delivery_address %>
+		  <strong>Cerveja Escolhida:</strong>
+		  <%= @order.beer.name %>
 		</p>
 
 		<p>
@@ -32,14 +32,11 @@
 		</p>
 
 		<p>
-		  <strong>Status:</strong>
-		  <%= @order.status %>
+		  <strong>Valor Total:</strong>
+		  <%= sprintf('R$ %.2f',@order.beer.price * @order.quantity)  %>
 		</p>
 
-		<p>
-		  <strong>Cerveja Escolhida:</strong>
-		  <%= @order.beer.name %>
-		</p>
+
 		
 	</div>
 
