@@ -55,7 +55,7 @@ class OrdersController < ApplicationController
           @order.beer.available_quantity = sum
           if @order.save && @order.beer.save
             logger.info "New order was created"
-            format.html { redirect_to @order, notice: 'Pedido feito com sucesso, obrigado!' }
+            format.html { redirect_to @order, notice: 'Pedido da '+ @order.beer.name + ' foi feito com sucesso, obrigado!' }
             format.json { render :show, status: :created, location: @order }
           else
             format.html { render :new }
