@@ -5,16 +5,38 @@
 	
 	<div class="center-block col-xs-12 col-sm-6 col-md-6 col-lg-6 form-order" style="float: none; margin-top:15px;">
 		<p id="notice"><%= notice %></p>
+
+		<p>
+		  <strong>Nome:</strong>
+		  <%= @order.customer_name %>
+		</p>
+
+		<p>
+		  <strong>E-mail:</strong>
+		  <%= @order.email %>	
+		</p>
+
+		<p>
+		  <strong>Telefone:</strong>
+		  <%= @order.phone_number %>
+		</p>
+
+		<p>
+		  <strong>Cerveja Escolhida:</strong>
+		  <%= @order.beer.name %>
+		</p>
+
+		<p>
+		  <strong>Quantidade:</strong>
+		  <%= @order.quantity %>
+		</p>
+
+		<p>
+		  <strong>Valor Total:</strong>
+		  <%= sprintf('R$ %.2f',@order.beer.price * @order.quantity)  %>
+		</p>
         
-        <p>Temos a Praga (Czech Lager) e a Speciality (Saizon com Pitaya) disponíveis, faça seu pedido pelos botões abaixo:</p>
-        <p id="msg1">Speciality:  
-            <a role="button" class="btn btn-primary btn-sm active" href="/orders/beer/10">Encomendar</a>
-        </p>
-        
-        <p id="msg2">Praga: 
-            <a role="button" class="btn btn-primary btn-sm active" href="/orders/beer/11">Encomendar</a>
-        </p>
-	</div>
+        </div>
 
 	<footer	class="footer">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center panel-footer">
